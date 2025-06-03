@@ -26,24 +26,24 @@ int main()
             {
                 cout << "Atendendo: " << pacientes.front() << endl;
                 pacientes.pop();
-            }
-            else
-            {
+            } else {
                 cout << "Fila vazia!\n";
             }
             break;
         case 3:
             cout << "Fila: ";
+            
+            queue<string> copia = pacientes;
+            while (!copia.empty())
             {
-                queue<string> copia = pacientes;
-                while (!copia.empty())
-                {
-                    cout << copia.front() << " ";
-                    copia.pop();
-                }
-                cout << endl;
+                cout << copia.front() << " ";
+                copia.pop();
             }
+            cout << endl;
+            
             break;
         }
     } while (opcao != 0);
+    
+    return 0;
 }
