@@ -20,13 +20,13 @@ int main()
 		cout << "Escolha uma opção: ";
 		cin >> opcao;
 		cin.ignore(); // Limpa o buffer do cin
-
+	
 		if (opcao == 1)
 		{
 			string novoTexto;
 			cout << "Digite o texto a adicionar: ";
 			getline(cin, novoTexto);
-
+	
 			// Salva o estado atual antes de modificar
 			historico.push(texto_atual);
 			texto_atual += novoTexto;
