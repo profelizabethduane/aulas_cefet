@@ -61,9 +61,8 @@ int main()
 	//  3. listar todos os números da fila na ordem de inserção
 	//  4. sair
 
-	// O item 3 deve ser implementado fora da classe.
-	// Lembre-se que só é possível acessar o elemento da frente da lista.
-	// É necessário desenfileirar para acessar o próximo elemento
+	// Implementar o item 3 como um método da classe
+
 
 	return 0;
 }
