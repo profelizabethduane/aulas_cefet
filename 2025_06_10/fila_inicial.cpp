@@ -17,6 +17,11 @@ public:
 	Fila(int capacidade)
 	{
 	}
+	// Destrutor da classe
+	~Fila()
+	{
+	   delete[] dados_; // Libera o array alocado com 'new int[tamanho]'
+	}
 	// retorna verdadeiro se a fila estiver vazia
 	// retorna falso, caso contrário
 	bool EstaVazia()
