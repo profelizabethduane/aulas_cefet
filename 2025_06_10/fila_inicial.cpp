@@ -24,26 +24,26 @@ public:
 	}
 	// retorna verdadeiro se a fila estiver vazia
 	// retorna falso, caso contrário
-	bool EstaVazia()
+	bool Vazia()
 	{
 	}
 	// retorna verdadeiro se a fila estiver cheia
 	// retorna falso, caso contrário
-	bool EstaCheia()
+	bool Cheia()
 	{
 	}
 
 	void Enfileira(int valor)
 	{
-		// verifica se a fila está cheia
-
-		// insere valor na posição de trás da file
+	   // verifica se a fila está cheia
+           // insere valor na posição de trás da fila
 	}
 
 	// retorna o elemento da frente da fila
 	int Frente()
 	{
 	}
+
 	// retira o elemento da frente da fila
 	void Desenfileira()
 	{
