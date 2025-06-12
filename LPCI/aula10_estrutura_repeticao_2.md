@@ -21,7 +21,7 @@ Acesse a apresentação: [Estrutura de Repetição](https://docs.google.com/pres
 ##
 #### Exercícios
 
-**Instrução:** Cada exercício deve ser salvo separadamente em um arquivo .c ou .cpp. Deve-se criar o hábito de escrever informações sobre o código do arquivo. Preencher as informações de nome, data e descrição no início do arquivo.
+**Instrução:** Cada exercício deve ser salvo separadamente em um arquivo `.c` ou `.cpp`. Deve-se criar o hábito de escrever informações sobre o código do arquivo. Preencher as informações de nome, data e descrição no início do arquivo.
 
 Enviar atividades pelo SIGAA 
 
