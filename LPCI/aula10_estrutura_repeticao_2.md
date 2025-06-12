@@ -6,9 +6,8 @@
 
 **Professora:** Elizabeth Duane
 
----
-
-### Estrutura de Repetição "`while`" e "`do...while`"\*\*
+##
+### Estrutura de Repetição "`while`" e "`do...while`"
 
 #### Exercícios de Fixação
 
@@ -19,7 +18,8 @@ Acesse a apresentação: [Estrutura de Repetição](https://docs.google.com/pres
 - Salve o código de cada exemplo e submeta no SIGAA na tarefa do dia.
   > Salve cada arquivo com o nome `exemplo1.c`, `exemplo2.c` ... (ou `.cpp`)
 
-#### Exercício
+##
+#### Exercícios
 
 **Instrução:** Cada exercício deve ser salvo separadamente em um arquivo .c ou .cpp. Deve-se criar o hábito de escrever informações sobre o código do arquivo. Preencher as informações de nome, data e descrição no início do arquivo.
 
@@ -54,15 +54,6 @@ Enviar atividades pelo SIGAA ( [ava.cefetmg.br](http://ava.cefetmg.br) )
   - Massa inicial e final.
   - Total de meias-vidas calculadas.
 
-- Entrada de Dados:
-  -- O usuário informa a massa inicial do material radioativo (em gramas).
-- Processo de Decaimento
-  -- A cada iteração (meia-vida), a massa é reduzida pela metade (`massa_atual /= 2`).
-  -- O loop continua até que a massa atual seja menor que 1% da inicial.
-- Saída
-  -- A cada iteração, mostrar: a massa restante e a porcentagem em relação à massa inicial a cada meia-vida (_contador de iterações_).
-  -- Ao final, exibe-se um resumo com: nome do elemento, massa inicial, massa final e quantidade de meias-vidas necessárias para chegar a menos de 1%
-
 **Exemplo:**
 
 ```
@@ -84,9 +75,10 @@ Resultado Final:
 - Meias-vidas decorridas: 7
 ```
 
----
+##
 
 #### Lista de Exercícios Conjunta
 
 Focar nos seguintes exercícios da _Lista 2_: 11, 12, 13, 14, 18, 20 e 22
-Esses exercícios serão entregues todos juntos conforme especificação.
+
+> Esses exercícios serão entregues todos juntos conforme especificação no SIGAA.
