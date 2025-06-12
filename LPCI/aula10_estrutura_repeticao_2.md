@@ -23,7 +23,7 @@ Acesse a apresentação: [Estrutura de Repetição](https://docs.google.com/pres
 
 **Instrução:** Cada exercício deve ser salvo separadamente em um arquivo .c ou .cpp. Deve-se criar o hábito de escrever informações sobre o código do arquivo. Preencher as informações de nome, data e descrição no início do arquivo.
 
-Enviar atividades pelo SIGAA ( [ava.cefetmg.br](http://ava.cefetmg.br) )
+Enviar atividades pelo SIGAA 
 
 > - INCLUIR COMENTÁRIOS NO CÓDIGO
 > - NÃO ENVIAR ARQUIVO COMPACTADO\! Enviar cada arquivo `.c` ou `.cpp` direto na pasta da tarefa no SIGAA.
