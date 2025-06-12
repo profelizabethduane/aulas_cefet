@@ -9,7 +9,7 @@
 ##
 ### Estrutura de Repetição "`while`" e "`do...while`"
 
-#### Exercícios de Fixação
+#### Exercícios de Fixação: Para ser entregue na tarefa "Atividade Prática - 12/06"
 
 Acesse a apresentação: [Estrutura de Repetição](https://docs.google.com/presentation/d/1GqQdHXTRTsCUUvsM8im9chdWjwaYGNkrB-jM_xqsCCs/edit?usp=sharing)
 
@@ -27,6 +27,7 @@ Enviar atividades pelo SIGAA
 
 > - INCLUIR COMENTÁRIOS NO CÓDIGO
 > - NÃO ENVIAR ARQUIVO COMPACTADO\! Enviar cada arquivo `.c` ou `.cpp` direto na pasta da tarefa no SIGAA.
+
 
 **Exercício 1.** Leia o nome e a massa inicial de um elemento e simule o decaimento radioativo. A cada iteração, reduzir a massa pela metade até que reste menos de 1% da massa inicial.
 
@@ -75,10 +76,20 @@ Resultado Final:
 - Meias-vidas decorridas: 7
 ```
 
+>**Dica:** No comando `printf`, para exibir o símbolo de porcentagem (`%`), você precisa usar dois símbolos seguidos (`%%`).
+>
+>`float valor = 50;`
+>
+>`printf("%.2f%%", valor);  // Saída: 50.00%`
+>
+> - `%.2f` → Formata o float com 2 casas decimais.
+> - `%%` → Imprime o símbolo `%` literalmente.
+> 
+> Isso ocorre porque o `%` é um caractere especial em `printf` (usado para formatar valores, como `%d`, `%f`, etc.). Portanto, para imprimir o símbolo literalmente, você deve escapá-lo com outro `%`.
 ##
 
-#### Lista de Exercícios Conjunta
+#### Lista de Exercícios Conjunta: Para ser entregue em data posterior
 
 Focar nos seguintes exercícios da _Lista 2_: 11, 12, 13, 14, 18, 20 e 22
 
-> Esses exercícios serão entregues todos juntos conforme especificação no SIGAA.
+> Esses exercícios serão entregues todos juntos conforme especificação no SIGAA. 
