@@ -11,7 +11,7 @@
 
 #### Exercícios de Fixação: Para ser entregue na tarefa "Atividade Prática - 12/06"
 
-Acesse a apresentação: [Estrutura de Repetição](https://docs.google.com/presentation/d/1GqQdHXTRTsCUUvsM8im9chdWjwaYGNkrB-jM_xqsCCs/edit?usp=sharing)
+Acesse a apresentação no link: [Estrutura de Repetição](https://docs.google.com/presentation/d/1GqQdHXTRTsCUUvsM8im9chdWjwaYGNkrB-jM_xqsCCs/edit?usp=sharing)
 
 - Leia os slides da apresentação
 - Digite e rode os exemplos de 1 à 6
