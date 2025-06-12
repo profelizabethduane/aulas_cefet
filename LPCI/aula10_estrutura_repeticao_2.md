@@ -1,7 +1,9 @@
 ## Centro Federal de Educação Tecnológica de Minas Gerais - Unidade Contagem
 
 **Disciplina:** Laboratório Programação de Computadores I
+
 **Curso:** Engenharia Química - 1°Período
+
 **Professora:** Elizabeth Duane
 
 ---
