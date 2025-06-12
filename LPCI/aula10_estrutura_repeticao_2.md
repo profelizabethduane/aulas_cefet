@@ -1,63 +1,90 @@
-**Centro Federal de Educação Tecnológica de Minas Gerais**
+## Centro Federal de Educação Tecnológica de Minas Gerais - Unidade Contagem
 
-Unidade Contagem
+**Disciplina:** Laboratório Programação de Computadores I
+**Curso:** Engenharia Química - 1°Período
+**Professora:** Elizabeth Duane
 
-| Disciplina: Laboratório Programação de Computadores I | Curso: Engenharia Química - 1°Período |     |
-| :---------------------------------------------------- | :------------------------------------ | :-- |
-| **Professora:** Elizabeth Duane                       |
+---
 
-**Estrutura de Repetição "while" e "do...while"**
+### Estrutura de Repetição "`while`" e "`do...while`"\*\*
+
+#### Exercícios de Fixação
 
 Acesse a apresentação: [Estrutura de Repetição](https://docs.google.com/presentation/d/1GqQdHXTRTsCUUvsM8im9chdWjwaYGNkrB-jM_xqsCCs/edit?usp=sharing)
 
-Leia os slides da apresentação
-Digite e rode os exemplos 5 e 6
-Salve o código de cada exemplo e entregue no SIGAA
-Salve com o exemplo1.c e exemplo2.c
+- Leia os slides da apresentação
+- Digite e rode os exemplos de 1 à 6
+- Salve o código de cada exemplo e submeta no SIGAA na tarefa do dia.
+  > Salve cada arquivo com o nome `exemplo1.c`, `exemplo2.c` ... (ou `.cpp`)
 
-**Exercícios**
+#### Exercício
 
-Fazer os seguintes exercícios da Lista 2: 11, 12, 13, 14, 18, 20 e 22
+**Instrução:** Cada exercício deve ser salvo separadamente em um arquivo .c ou .cpp. Deve-se criar o hábito de escrever informações sobre o código do arquivo. Preencher as informações de nome, data e descrição no início do arquivo.
 
-**Instrução:** Cada exercício deve ser salvo separadamente em um arquivo .c ou .cpp, (por exemplo, .c). Deve-se criar o hábito de escrever informações sobre o código do arquivo. Preencher as informações de nome, data e descrição no início do arquivo.
+Enviar atividades pelo SIGAA ( [ava.cefetmg.br](http://ava.cefetmg.br) )
 
-Enviar atividades pelo SGAA ( [ava.cefetmg.br](http://ava.cefetmg.br) )
+> - INCLUIR COMENTÁRIOS NO CÓDIGO
+> - NÃO ENVIAR ARQUIVO COMPACTADO\! Enviar cada arquivo `.c` ou `.cpp` direto na pasta da tarefa no SIGAA.
 
-- FAZER COMENTÁRIOS NO CÓDIGO
-- NÃO ENVIAR ARQUIVO COMPACTADO\! Enviar cada arquivo ".c" / ou ".cpp" direto na pasta da tarefa no SIGAA.
+**Exercício 1.** Leia o nome e a massa inicial de um elemento e simule o decaimento radioativo. A cada iteração, reduzir a massa pela metade até que reste menos de 1% da massa inicial.
 
-Simulação de Decaimento Radioativo de um Elemento. Leia a massa inicial de um elemento e simule o decaimento radioativo.
+**Entrada de Dados**
 
-Entrada de Dados
+- O usuário deve informar:
+  - O **nome do elemento radioativo** (ex.: "Cobalto-60").
+  - A **massa inicial** do material (em gramas).
 
-O usuário informa a massa inicial do material radioativo (em gramas).
+**Processo de Decaimento:**
 
-Processo de Decaimento
+1.  A cada iteração (que representa **uma meia-vida**):
+    - A massa atual é reduzida à metade (`massa_atual /= 2`).
+2.  O loop repete até que a massa atual seja **menor que 1% da massa inicial**.
 
-A cada iteração (meia-vida), a massa é reduzida pela metade (massa_atual /= 2).
+#### **Saída do Programa**
 
-O loop continua até que a massa seja menor que 1% da inicial.
+- **Durante a simulação (a cada iteração):**
+  - Número da meia-vida (_contador_).
+  - Massa restante (em gramas).
+  - Porcentagem da massa restante em relação à inicial.
+- **Ao final da simulação:**
 
-Saída
+  - Nome do elemento.
+  - Massa inicial e final.
+  - Total de meias-vidas calculadas.
 
-A cada iteração, mostrar, a massa restante e a porcentagem em relação à massa inicial a cada meia-vida.
+- Entrada de Dados:
+  -- O usuário informa a massa inicial do material radioativo (em gramas).
+- Processo de Decaimento
+  -- A cada iteração (meia-vida), a massa é reduzida pela metade (`massa_atual /= 2`).
+  -- O loop continua até que a massa atual seja menor que 1% da inicial.
+- Saída
+  -- A cada iteração, mostrar: a massa restante e a porcentagem em relação à massa inicial a cada meia-vida (_contador de iterações_).
+  -- Ao final, exibe-se um resumo com: nome do elemento, massa inicial, massa final e quantidade de meias-vidas necessárias para chegar a menos de 1%
 
-Ao final, exibe-se um resumo com:
+**Exemplo:**
 
-Massa inicial e final
+```
+Digite o nome do elemento: Cobalto-60
+Digite a massa inicial (em gramas): 150
 
-Quantidade de meias-vidas necessárias para chegar a menos de 1%
-
-Para cada iteração mostre a iteração atual, a massa restante e % da massa inicial. A massa inicial, a massa final, a porcentagem final e o número de meias-vidas decorrido
-
-exemplo:
-Digite a massa inicial(em gramas): 100
-
-Processo de Decaimento:
+Processo de Decaimento do Cobalto-60:
+Meia-vida 1: 75.00 g (50.00%)
+Meia-vida 2: 37.50 g (25.00%)
+Meia-vida 3: 18.75 g (12.50%)
+Meia-vida 4: 9.38 g (6.25%)
+Meia-vida 5: 4.69 g (3.12%)
+Meia-vida 6: 2.34 g (1.56%)
 
 Resultado Final:
+- Elemento: Cobalto-60
+- Massa inicial: 150.00 g
+- Massa final: 1.17 g (0.78%)
+- Meias-vidas decorridas: 7
+```
 
-- Massa inicial: 100.0000 g
-- Massa final: 1.5625 g (1.56% da inicial)
-- Meias-vidas decorridas: 6
-  Simular a meia-vida de um elemento: a cada iteração, reduzir a massa pela metade até que reste menos de 1% da inicial.
+---
+
+#### Lista de Exercícios Conjunta
+
+Focar nos seguintes exercícios da _Lista 2_: 11, 12, 13, 14, 18, 20 e 22
+Esses exercícios serão entregues todos juntos conforme especificação.
