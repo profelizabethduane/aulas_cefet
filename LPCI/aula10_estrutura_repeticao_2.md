@@ -39,7 +39,7 @@ Acesse a apresentação no link: [Estrutura de Repetição](https://docs.google.
 **Processo de Decaimento:**
 
 1.  A cada iteração (que representa **uma meia-vida**):
-    - A massa atual é reduzida à metade (`massa_atual /= 2`).
+    - A massa atual é reduzida à metade (`massa_atual = massa_atual / 2`).
 2.  O loop repete até que a massa atual seja **menor que 1% da massa inicial**.
 
 #### **Saída do Programa**
