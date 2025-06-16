@@ -100,7 +100,7 @@ public:
     }
 
     // topo(): Retorna o elemento do topo da pilha sem removê-lo
-    int topo() {
+    int topo() const {
       //Completar
 
 
@@ -110,8 +110,8 @@ public:
 
     }
 
-    //isEmpty(): Verifica se a pilha está vazia
-    bool isEmpty() const {
+    //estaVazia(): Verifica se a pilha está vazia
+    bool estaVazia() const {
         //Completar
 
 
@@ -119,8 +119,8 @@ public:
 
     }
 
-    // isFull(): Verifica se a pilha está cheia
-    bool isFull() const {
+    // estaCheia(): Verifica se a pilha está cheia
+    bool estaCheia() const {
         //Completar
 
 
