@@ -1,7 +1,16 @@
-# Centro Federal de Educação Tecnológica de Minas Gerais
-Disciplina: Laboratório de Linguagens e Técnicas de Programação
+## Centro Federal de Educação Tecnológica de Minas Gerais - Unidade Contagem
+
+**Disciplina:** Laboratório de Linguagens e Técnicas de Programação
+
+**Curso:** Técnico em Informática - 2°Período
+
+**Professora:** Elizabeth Duane
+
+**Data:** 17/06/2025
 
 ## Implementação de Pilha com Array
+
+**Instrução:** Siga as instruções abaixo e entregue os exercícios no Moodle.
 
 ## Exercício 1: Pilha com Array Dinâmico de Inteiros
 
@@ -61,21 +70,23 @@ public:
 
 ### `PilhaArrayInt.cpp` (Implementação dos Métodos)
 
-Crie um arquivo chamado `PilhaArrayInt.cpp` e adicione o seguinte código:
+Crie um arquivo chamado `PilhaArrayInt.cpp` e adicione o seguinte código, e implemente os métodos que estão incompletos:
 
 ```cpp
 #include "PilhaArrayInt.hpp"
 
 // Construtor
 PilhaArrayInt::PilhaArrayInt(int cap) {
-    capacidade = cap;
-    dados = new int[capacidade];
-    topo = -1;
+
+
+
 }
 
 // Destrutor
 PilhaArrayInt::~PilhaArrayInt() {
-    delete[] dados;
+
+
+
 }
 
 // push(elemento): Insere um elemento no topo da pilha
@@ -83,7 +94,8 @@ void PilhaArrayInt::push(int elemento) {
     if (isFull()) {
         throw std::overflow_error("Erro: Pilha cheia (overflow)!");
     }
-    dados[++topo] = elemento;
+
+
 }
 
 // pop(): Remove o elemento do topo da pilha
@@ -91,7 +103,8 @@ void PilhaArrayInt::pop() {
     if (isEmpty()) {
         throw std::underflow_error("Erro: Pilha vazia (underflow)!");
     }
-    return dados[topo--];
+
+
 }
 
 // top(): Retorna o elemento do topo da pilha sem removê-lo
@@ -99,28 +112,32 @@ int PilhaArrayInt::top() {
     if (isEmpty()) {
         throw std::underflow_error("Erro: Pilha vazia!");
     }
-    return dados[topo];
+
+
 }
 
 // isEmpty(): Verifica se a pilha está vazia
 bool PilhaArrayInt::isEmpty() {
-    return topo == -1;
+
+
 }
 
 // isFull(): Verifica se a pilha está cheia
 bool PilhaArrayInt::isFull() {
-    return topo == capacidade - 1;
+
+
 }
 
 // size(): Retorna o número atual de elementos na pilha
 int PilhaArrayInt::size() {
-    return topo + 1;
+
+
 }
 ```
 
 ### `main.cpp` (Testando a Implementação)
 
-Crie um arquivo `main.cpp` para testar a sua `PilhaArrayInt`. Compile e execute para ver o comportamento.
+Crie um arquivo `main_exercicio1.cpp` para testar a sua `PilhaArrayInt`. Compile e execute para ver o comportamento.
 
 ```cpp
 #include <iostream>
@@ -166,20 +183,14 @@ int main() {
     return 0;
 }
 ```
-
-**Para compilar:**
-
-`g++ main.cpp PilhaArrayInt.cpp -o teste_pilha`
-
-**Para executar:**
-
-`./teste_pilha`
+- Compile e execute o código
+- Envie o arquivo os três arquivos na atividade do dia no Moodle.
 
 ## Exercício 2: Pilha Genérica com Templates
 
 Neste exercício, você implementará uma pilha genérica, capaz de armazenar elementos de qualquer tipo de dado (inteiros, floats, strings, objetos personalizados, etc.), utilizando templates em C++. Isso torna sua implementação muito mais flexível e reutilizável.
-L
 
+[Sobre Templates](https://github.com/profelizabethduane/aulas_cefet/new/main/LTPI#templates-em-c)
 
 ### Estrutura da Classe `PilhaGenerica`
 
@@ -204,7 +215,6 @@ A classe `PilhaGenerica` será muito similar à `PilhaArrayInt`, mas com a adiç
 ### `PilhaGenerica.hpp` (Declaração e Implementação da Classe Template)
 
 Para classes template, a declaração e a implementação geralmente ficam no mesmo arquivo `.hpp`. Crie um arquivo chamado `PilhaGenerica.hpp` e adicione o seguinte código:
-[Sobre Templates](https://github.com/profelizabethduane/aulas_cefet/new/main/LTPI#templates-em-c)
 
 ```cpp
 #ifndef PILHA_GENERICA_HPP
@@ -258,12 +268,12 @@ public:
   
     // isEmpty(): Verifica se a pilha está vazia
     bool isEmpty() const {
-        return topo == -1;
+        return size == 0;
     }
   
     // isFull(): Verifica se a pilha está cheia
     bool isFull() const {
-        return topo == capacidade - 1;
+        return size == capacidade;
     }
   
     // size(): Retorna o número atual de elementos na pilha
@@ -277,7 +287,7 @@ public:
 
 ### `main_generico.cpp` (Testando a Implementação Genérica)
 
-Crie um arquivo `main_generico.cpp` para testar a sua `PilhaGenerica` com diferentes tipos de dados.
+Crie um arquivo `main_exercicio2.cpp` para testar a sua `PilhaGenerica` com diferentes tipos de dados.
 
 ```cpp
 #include <iostream>
@@ -334,19 +344,36 @@ int main() {
 }
 ```
 
-**Para compilar:**
-
-`g++ main_generico.cpp -o teste_pilha_generica`
-
-**Para executar:**
-
-`./teste_pilha_generica`
+- Compile e execute o código
+- Envie o arquivo os dois arquivos na atividade do dia no Moodle.
 
 ## Exercício 3: Verificador de Balanceamento de Símbolos
 
-**Objetivo:** Utilizar a pilha para verificar se parênteses, colchetes e chaves em uma expressão estão corretamente balanceados.
+**Objetivo:** Utilizar a pilha para verificar se parênteses, colchetes e chaves em uma expressão estão corretamente balanceados. 
 
 **Conceito:** Para cada símbolo de abertura, ele é empilhado. Para cada símbolo de fechamento, o topo da pilha é verificado. Se corresponder, ambos são considerados balanceados e o símbolo de abertura é desempilhado. Se não houver correspondência ou a pilha estiver vazia, há um erro.
+
+### Expressões Balanceadas
+Essas expressões têm todos os símbolos de abertura e fechamento corretamente pareados e organizados:
+
+- `(a + b) * (c - d)`
+- `[2 + 3 * (4 / 2)]`
+- `{[a * (b + c)] + d}`
+- `((1 + 2) * 3)`
+- `[{()}]`
+
+### Expressões Não Balanceadas
+Essas têm símbolos de abertura ou fechamento faltando, ou estão na ordem errada:
+
+- `(a + b]` → abre com (, fecha com ]
+- `[2 + 3 * (4 / 2]` → falta fechar o (
+- `{[a + b]` → falta fechar a {
+- `(a + b))` → parênteses extras no final
+- `[(])` → ordem incorreta dos símbolos
+
+
+
+Crie um arquivo `main_exercicio2.cpp` e inclua o seguinte código:
 
 **Implementação:**
 
@@ -397,47 +424,10 @@ int main() {
 }
 ```
 
-## Exercício 4: Conversor Infixa para Pós-fixa
+- Compile e execute o código
+- Envie o arquivo `main_exercicio2.cpp`.
 
-**Objetivo:** Converter uma expressão matemática da notação infixa para a notação pós-fixa (polonesa inversa) usando uma pilha.
-
-**Conceito:** O algoritmo Shunting-yard utiliza uma pilha para operadores e parênteses para reordenar a expressão. Operandos são adicionados diretamente à saída, enquanto operadores são empilhados e desempilhados com base em sua precedência e associatividade.
-
-**Dicas:**
-
-* Defina uma função para obter a precedência de cada operador.
-* Lide com parênteses: `(` é empilhado, `)` desempilha operadores até encontrar `(`.
-* Se o token for um operando, adicione-o à string de saída.
-* Se o token for um operador, desempilhe operadores da pilha para a saída enquanto o topo da pilha tiver maior ou igual precedência.
-
-**Pseudocódigo Simplificado:**
-
-```
-funcao infixaParaPosfixa(expressaoInfixa):
-  pilhaDeOperadores = nova Pilha()
-  saidaPosfixa = string vazia
-
-  para cada token na expressaoInfixa:
-    se token eh operando:
-      adicionar token a saidaPosfixa
-    se token eh '(': 
-      empilhar '('
-    se token eh ')':
-      enquanto pilhaDeOperadores nao vazia E topo nao eh '(': 
-        desempilhar e adicionar a saidaPosfixa
-      desempilhar '(' (descartar)
-    se token eh operador:
-      enquanto pilhaDeOperadores nao vazia E topo nao eh '(' E precedencia(topo) >= precedencia(token):
-        desempilhar e adicionar a saidaPosfixa
-      empilhar token
-
-  enquanto pilhaDeOperadores nao vazia:
-    desempilhar e adicionar a saidaPosfixa
-
-  retornar saidaPosfixa
-```
-
-## Exercício 5: Inversão de String usando Pilha
+## Exercício 4: Inversão de String usando Pilha
 
 **Objetivo:** Inverter uma string utilizando uma pilha.
 
@@ -447,6 +437,8 @@ funcao infixaParaPosfixa(expressaoInfixa):
 - Crie uma função `std::string inverterString(const std::string& str)` que recebe uma string inserida pelo usuário e retorna a string invertida.
 - Solicite ao usuário que digite uma frase e mostre-a em ordem inversa.
 - Utilize a classe `PilhaGenerica.hpp`
+
+Crie o arquivo `main_exercicio4.cpp` e inclua o seguinte código:
 
 ```cpp
 #include <iostream>
@@ -469,13 +461,14 @@ int main() {
     return 0;
 }
 ```
+- Complete o código 
+- Compile e execute o código
+- Envie o arquivo `main_exercicio4.cpp`.
 
-
+---
 ## Templates em C++
 
 Templates são um recurso poderoso do C++ que permitem escrever código **genérico**, ou seja, código que funciona com diferentes tipos de dados sem precisar duplicar a lógica.
-
----
 
 ## 🔧 Templates de Função
 
