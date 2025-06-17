@@ -351,7 +351,7 @@ int main() {
 
 **Objetivo:** Utilizar a pilha para verificar se parênteses, colchetes e chaves em uma expressão estão corretamente balanceados. 
 
-**Conceito:** Para cada símbolo de abertura, ele é empilhado. Para cada símbolo de fechamento, o topo da pilha é verificado. Se corresponder, ambos são considerados balanceados e o símbolo de abertura é desempilhado. Se não houver correspondência ou a pilha estiver vazia, há um erro.
+**Conceito:** Para cada símbolo de abertura, ele é empilhado. Para cada símbolo de fechamento, o topo da pilha é verificado. Se corresponder (o topo e o símbolo atual), ambos são considerados balanceados e o símbolo de abertura é desempilhado. Se não houver correspondência ou a pilha estiver vazia, há um erro.
 
 ### Expressões Balanceadas
 Essas expressões têm todos os símbolos de abertura e fechamento corretamente pareados e organizados:
@@ -371,9 +371,28 @@ Essas têm símbolos de abertura ou fechamento faltando, ou estão na ordem erra
 - `(a + b))` → parênteses extras no final
 - `[(])` → ordem incorreta dos símbolos
 
+### Pseudocódigo:
+
+```
+funcao verificarBalanceamento(expressao):
+  pilha = nova Pilha()
+
+  para cada caractere na expressao:
+    se caractere eh um simbolo de abertura
+      empilhar caractere
+    senao se caractere eh um simbolo de fechamento
+      se pilha esta vazia:
+        retornar FALSO
+      topo = topo da pilha
+      desempilhar
+      se caractere de fechamento nao corresponde ao topo:
+        retornar FALSO
+
+  retornar pilha esta vazia
+```
 
 
-Crie um arquivo `main_exercicio2.cpp` e inclua o seguinte código:
+Crie um arquivo `main_exercicio2.cpp`, inclua o seguinte código e implemente a função `verificarBalanceamento`:
 
 **Implementação:**
 
@@ -383,26 +402,8 @@ Crie um arquivo `main_exercicio2.cpp` e inclua o seguinte código:
 #include "PilhaGenerica.hpp" // Inclua sua PilhaGenerica.hpp
 
 bool verificarBalanceamento(const std::string& expressao) {
-    PilhaGenerica<char> pilha;
 
-    for (char c : expressao) {
-        if (c == '(' || c == '[' || c == '{') {
-            pilha.push(c);
-        } else if (c == ')' || c == ']' || c == '}') {
-            if (pilha.isEmpty()) {
-                return false; // Símbolo de fechamento sem correspondente
-            }
-            char topo = pilha.top();
-            pilha.pop();
 
-            if ((c == ')' && topo != '(') ||
-                (c == ']' && topo != '[') ||
-                (c == '}' && topo != '{')) {
-                return false; // Símbolo de fechamento não corresponde ao de abertura
-            }
-        }
-    }
-    return pilha.isEmpty(); // Deve estar vazia no final se tudo estiver balanceado
 }
 
 int main() {
